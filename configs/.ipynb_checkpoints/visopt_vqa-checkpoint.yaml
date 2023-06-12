@@ -1,0 +1,37 @@
+train_file: ['vqa_train.json',
+             'vqa_val.json',   
+             ] #'vg_qa.json'
+             
+test_file: ['vqa_test.json']
+answer_list: 'answer_list.json'
+
+vqa_root: 'coco/' #train2014/
+vg_root: 'visual_genome/'  #image/
+
+image_res: 224
+batch_size_train: 64
+batch_size_test: 4
+k_test: 128
+
+warm_up: True
+
+
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 2e-5, epochs: 8, min_lr: 1e-6, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 4, cooldown_epochs: 0}
+
+use_vis_prefix: True
+start_layer_idx: 11
+end_layer_idx: 23
+
+injected_hidden_states: 1
+
+lm_loss_weight: 0.1 
+
+unfreeze_text_layer_norm: False
+unfreeze_vision_layer_norm: False
+
+
+
+
+ 

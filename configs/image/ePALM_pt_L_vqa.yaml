@@ -1,0 +1,52 @@
+
+
+image_res: 224
+batch_size_train: 2
+
+batch_size_test: 16
+k_test: 64
+
+warm_up: True
+
+
+
+optimizer: {opt: adamW, lr: 2e-4, weight_decay: 0.02, prompt_lr: 1e-3}
+schedular: {sched: cosine, scheduler_groups: 0 , lr: 2e-4, epochs: 35, min_lr: 1e-5, decay_rate: 1, warmup_lr: 1e-4, warmup_epochs: 4, cooldown_epochs: 0}
+
+use_vis_prefix: True
+start_layer_idx: 19
+end_layer_idx: 31
+
+injected_hidden_states: 6
+shared_connector: True
+
+lm_loss_weight: 0.1 
+
+unfreeze_text_layer_norm: False
+unfreeze_vision_layer_norm: False
+
+
+num_workers: 4
+
+special_answer_token: '</a>'
+
+replace_added_tokens: True
+
+
+use_cache: False
+
+connector_per_text_layer: False
+
+text_step: 1
+
+num_beams: 3
+do_sample: False
+# Prompt tuning
+prompt_tuning: True 
+prompt_len: 10 
+
+mlp: False
+
+train_split: 'train_standard'
+val_split: 'karpathy_val'
+test_split: 'karpathy_val' # val_standard
