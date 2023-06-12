@@ -17,8 +17,8 @@ In this repo, you will find the pretrained models and code to train and evaluate
     * We add new experiments, including pretraining on CC3M and evaluation in zero-shot (check Appendix).
 * **[May-2023]** The code is optimized to train and evaluate with float16 mixed precision, using the accelerate library 🤗.
 * **[May-2023]** We found greedy decoding with beam search is significantly better than multinomial/random sampling.
-* **[20-Mar-2023]** The paper is released on arXiv.
-* **[Mar-2023]** The paper is submitted for publication and currently under review. 
+* **[20-March-2023]** The paper is released on arXiv.
+* **[March-2023]** The paper is submitted for publication and currently under review. 
 
 ## Summary:
 
