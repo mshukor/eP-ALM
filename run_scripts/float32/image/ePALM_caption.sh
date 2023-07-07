@@ -5,7 +5,7 @@ data_dir=data/vl_adapter/vlt5_dataset
 output_dir=logs/epalm/ePALM_caption
 
 
-torchrun --nproc_per_node=1 --master_addr="localhost" --master_port=12326  caption.py \
+torchrun --nproc_per_node=1 --master_addr="localhost" --master_port=12326  float32/caption.py \
 --config $config \
 --output_dir  $output_dir \
 --data_dir $data_dir \

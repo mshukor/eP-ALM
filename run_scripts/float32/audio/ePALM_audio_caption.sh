@@ -4,7 +4,7 @@ config=./configs/audio/ePALM_audio_caption.yaml
 data_dir=data/audiocaps
 output_dir=logs/epalm/ePALM_audio_caption
 
-torchrun --nproc_per_node=4 --master_addr="localhost" --master_port=12325  audio_caption.py \
+torchrun --nproc_per_node=4 --master_addr="localhost" --master_port=12325  float32/audio_caption.py \
 --config $config \
 --output_dir  $output_dir \
 --data_dir $data_dir \

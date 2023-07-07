@@ -6,7 +6,7 @@ data_dir=data/vl_adapter/vlt5_dataset
 output_dir=logs/epalm/ePALM_vqa
 
 
-torchrun --nproc_per_node=4 --master_addr="localhost" --master_port=12309  vqa.py \
+torchrun --nproc_per_node=4 --master_addr="localhost" --master_port=12309  float32/vqa.py \
 --config $config \
 --output_dir  $output_dir \
 --data_dir $data_dir \

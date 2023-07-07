@@ -5,7 +5,7 @@ config=./configs/image/ePALM_pt_L_gqa.yaml
 data_dir=data/vl_adapter/vlt5_dataset
 output_dir=logs/epalm/ePALM_pt_L_gqa
 
-torchrun --nproc_per_node=8 --master_addr="localhost" --master_port=12303  gqa_vlt5.py \
+torchrun --nproc_per_node=8 --master_addr="localhost" --master_port=12303  float32/gqa.py \
 --config $config \
 --output_dir  $output_dir \
 --data_dir $data_dir \

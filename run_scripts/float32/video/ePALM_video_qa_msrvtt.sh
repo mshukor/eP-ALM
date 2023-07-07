@@ -3,7 +3,7 @@ config=./configs/video/ePALM_video_qa_msrvtt.yaml
 data_dir=data/MSRVTT
 output_dir=logs/epalm/ePALM_video_qa_msrvtt
 
-torchrun --nproc_per_node=4 --master_addr="localhost" --master_port=12325  video_vqa.py \
+torchrun --nproc_per_node=4 --master_addr="localhost" --master_port=12325  float32/video_vqa.py \
 --config $config \
 --output_dir  $output_dir \
 --data_dir $data_dir \

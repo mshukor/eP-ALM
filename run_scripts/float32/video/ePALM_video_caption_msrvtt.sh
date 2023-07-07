@@ -4,7 +4,7 @@ data_dir=data/MSRVTT
 output_dir=logs/epalm/ePALM_video_caption_msrvtt
 
 
-torchrun --nproc_per_node=4 --master_addr="localhost" --master_port=12325  video_caption.py \
+torchrun --nproc_per_node=4 --master_addr="localhost" --master_port=12325  float32/video_caption.py \
 --config $config \
 --output_dir  $output_dir \
 --data_dir $data_dir \
