@@ -1,6 +1,14 @@
 # eP-ALM: Efficient Perceptual Augmentation of Language Models
 
 <p align="center">
+    <img src="images/logo.jpg" width="300"/>
+</p>
+
+<p align="center">
+        <a href="https://mshukor.github.io/eP-ALM.github.io/">Project Page</a>&nbsp ｜ &nbsp<a href="https://huggingface.co/mshukor">Demo</a>&nbsp ｜ &nbsp<a href="#download">Checkpoints</a>&nbsp ｜ &nbsp<a href="https://aps.arxiv.org/abs/2303.11403">Paper </a>&nbsp
+</p>
+
+<p align="center">
     <img src="images/teaser.jpg" width="500"/>
 </p>
 
@@ -10,7 +18,8 @@ Official implementation of the paper:
 In this repo, you will find the pretrained models and code to train and evaluate eP-ALM on Image/Video/Audio-Text tasks.
 
 ## News
-
+* **[July-2023]** A [project page](https://mshukor.github.io/eP-ALM.github.io/) and a [demo](https://huggingface.co/mshukor) are now available.  
+* **[July-2023]** The paper is accepted at ICCV23 !
 * **[June-2023]** A new version of the paper is released on arXiv: 
     * We re-evaluate the models with greedy decoding.
     * We add comparison with SoTA.
@@ -72,6 +81,13 @@ from transformers import AutoTokenizer, OPTModel
 tokenizer = AutoTokenizer.from_pretrained("facebook/opt-2.7b")
 model = OPTModel.from_pretrained("facebook/opt-2.7b")
 ```
+
+### Pretrain Encoders
+
+You also need to download the different encoders from the following:
+* Audio AST encoder from this [repo](https://github.com/YuanGongND/ast/tree/master/pretrained_models), specifically this [model](https://www.dropbox.com/s/ca0b1v2nlxzyeb4/audioset_10_10_0.4593.pth?dl=1).
+* Video TimeSformer encoder from this [repo](https://github.com/facebookresearch/TimeSformer), specifically this [model](https://www.dropbox.com/s/4h2qt41m2z3aqrb/TimeSformer_divST_8x32_224_K600.pyth?dl=0).
+* Image Encoder should be downloaded automatically from with the timm library, specifically we use the  [vit_base_patch16_224](https://storage.googleapis.com/vit_models/augreg/B_16-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz) model.
 
 ### Pretrained Models
 We provide only the adaptation parameters (linear connection and Soft Prompt). You can download the following models:
