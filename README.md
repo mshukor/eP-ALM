@@ -153,11 +153,13 @@ sh run_scripts/float32/image/ePALM_vqa.sh
 ## Citation
 
 ```
-@article{shukor2023ep,
-  title={eP-ALM: Efficient Perceptual Augmentation of Language Models},
-  author={Shukor, Mustafa and Dancette, Corentin and Cord, Matthieu},
-  journal={arXiv preprint arXiv:2303.11403},
-  year={2023}
+@InProceedings{Shukor_2023_ICCV,
+    author    = {Shukor, Mustafa and Dancette, Corentin and Cord, Matthieu},
+    title     = {eP-ALM: Efficient Perceptual Augmentation of Language Models},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {22056-22069}
 }
 ```
 ## Acknowledgment
