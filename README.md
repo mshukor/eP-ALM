@@ -55,7 +55,7 @@ Large Language Models (LLMs) have so far impressed the world, with unprecedented
 
 ### Results
 
-> Comparison of eP-ALM with text generation-based SoTA that train significant number of parameters, including methods with large-scale pretraining. Best and next best scores are bolded and underlined respectively. FT: Finetuning. ZS: Zero-shot.
+> Comparison of eP-ALM with OPT-6.7B that train 0.06\% (~4M) of parameters (greedy decoding with number of beams 3) to SoTA that train large number of parameters on large datasets. $^*$: test-std set. PT: pretrained, FT: finetuned, ZS: zero-shot.
 
 <p align="center">
     <img src="images/epalm_sota.png" width="700"/>
